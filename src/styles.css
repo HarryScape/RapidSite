@@ -1,0 +1,273 @@
+body {
+  background-image: url(assets/stripes.svg);
+}
+
+:root {
+  --clr-green-400: hsl(82, 32, 61, 100%);
+  --clr-purple-400: hsl(286, 18, 48, 100%);
+  --clr-blue-400: #3379a5;
+
+  --crl-neutral-100: hsl(0, 0, 44, 100%);
+  --crl-neutral-900: hsl(210, 8, 19, 100%);
+
+  --ff-primary: "Open Sans", sans-serif, "Inter", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-200: 0.938rem; /* 15 */
+  --fs-300: 1.063rem; /* 17 */
+  --fs-400: 1.25rem; /* 20 */
+  --fs-500: 1.375rem; /* 22 */
+  --fs-600: 1.625rem; /* 26 */
+  --fs-700: 2.5rem; /* 40 */
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-200: 0.625rem;
+    --fs-400: 0.75rem;
+    --fs-600: 1.125rem;
+  }
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* img {
+  width: 50px;
+  height: auto;
+} */
+
+.container {
+  --max-width: 1638px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .primary-header .container {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 50em) {
+  h1 {
+    font-size: 33px;
+  }
+}
+
+/* HEADER */
+
+.hero-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/banner-image.webp");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+  object-position: 0% 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+.primary-header {
+  background-color: rgba(0, 0, 0, 0.233);
+  border-bottom: solid 1px #ffffff2a;
+}
+
+/* .primary-header .container {
+  padding-top: 30px;
+} */
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-button {
+  align-items: center;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: var(--clr-blue-400);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.mobile-nav-btn {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .mobile-nav-btn {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  .primary-navigation {
+    display: none;
+  }
+
+  .nav-button {
+    display: none;
+  }
+}
+
+.nav-list {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* SECTION 1 CAROUSEL */
+
+/* SECTION 2 CARDS */
+
+.blog-card img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* SECTION 3 BLOG CAROUSEL */
+
+/* SECTION 4 TESTIMONIALS */
+
+/* SECTION 5 ADVANTAGES */
+
+/* FOOTER */
