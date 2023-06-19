@@ -717,6 +717,115 @@ h1,
 
 /* SECTION 4 TESTIMONIALS */
 
+.testimonials {
+  background-color: #ffffff;
+}
+
+@media (max-width: 50em) {
+  .testimonials {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 30px; */
+    padding-top: 30px;
+  }
+  .customer-logo {
+    width: 85px;
+    height: 75px;
+  }
+
+  .testimonials h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #2c3034;
+    margin-bottom: 40px;
+  }
+
+  .customer {
+    display: flex;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+  }
+  .customer-content h3 {
+    color: #3379a5;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .customer-content p {
+    color: #404042;
+    font-size: 10px;
+  }
+  .customer-content {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 50em) {
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 100vw; */
+    min-width: 100%;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    margin-bottom: 80px;
+  }
+  .customer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    gap: 20px;
+  }
+
+  .customer-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .customer {
+    display: flex;
+    /* gap: 10px; */
+    /* margin-right: 40px;
+    margin-left: 40px; */
+  }
+
+  .customer-content {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .customer-content h3 {
+    color: #3379a5;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .customer-content p {
+    font-size: 15px;
+    color: #2c3034;
+    font-weight: 400;
+  }
+  .testimonials h2 {
+    color: #2c3034;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  .container .white-bg {
+    padding: none;
+  }
+}
+
 /* SECTION 5 ADVANTAGES */
 
 /* FOOTER */
