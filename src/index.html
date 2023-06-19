@@ -18,7 +18,6 @@
   </head>
   <body>
     <header class="primary-header">
-        <!-- <img class="banner-img" src="assets/banner-image.webp" alt="shopping mall"> -->
         <div class="hero-img"></div>
       <div class="container-header">
         <div class="nav-wrapper">
@@ -37,7 +36,6 @@
                 <button class="nav-button">REQUEST DEMO</button>
               </ul>
             </nav>
-            <!-- <button class="nav-button">REQUEST DEMO</button> -->
         </div>
       </div>
     </header>
@@ -53,7 +51,9 @@
                         <button class="btn-guide">DOWNLOAD GUIDE</button>
                         <button class="btn-demo">GET A DEMO</button>
                     </div>
-                    <div class="top-carousel-nav"><span>○</span><span>○</span><span>○</span></div>
+                    <div class="top-carousel-nav">
+                        <span>○</span><span>○</span><span>○</span>
+                    </div>
                 </div>
             </div>
       </section>
@@ -62,18 +62,28 @@
         <div class="container">
             <div class="cards">
                 <div class="card-column upper catering">
-                    <img class="mob-logo" src="assets/rapid-logo.svg" alt="Rapid">
-                    <img class="card-logo" src="assets/rapid-logo-green.svg">
-                    <h2>FOR CATERING</h2>
-                    <p class="card-info">Take you site management to <strong>new levels of efficiency</strong> with top-down solution.</p>
-                    <button class="card-info info-btn-catering">LEARN MORE</button>
+                        <div class="card-head">
+                            <img class="mob-logo" src="assets/rapid-logo.svg" alt="Rapid logo">
+                            <img class="card-logo" src="assets/rapid-logo-green.svg" alt="Rapid logo">
+                            <h2>FOR CATERING</h2>
+                        </div>
+                        <hr class="card-separater-left">
+                        <div class="card-body">
+                            <p class="card-info">Take you site management to <strong>new levels of efficiency</strong> with top-down solution.</p>
+                            <button class="card-info info-btn-catering">LEARN MORE</button>
+                        </div>
                 </div>
                 <div class="card-column upper retail">
-                    <img class="mob-logo" src="assets/rapid-logo.svg" alt="Rapid">
-                    <img class="card-logo" src="assets/rapid-logo-purple.svg">
-                    <h2>FOR RETAIL</h2>
-                    <p class="card-info">Learn how RAPID <strong>solves inconsistent</strong> store standards and site-wide campaigns</p>
-                    <button class="card-info info-btn-retail">LEARN MORE</button>
+                    <div class="card-head">
+                        <img class="mob-logo" src="assets/rapid-logo.svg" alt="Rapid">
+                        <img class="card-logo" src="assets/rapid-logo-purple.svg">
+                        <h2>FOR RETAIL</h2>
+                    </div>
+                    <hr class="card-separater-right">
+                    <div class="card-body">
+                        <p class="card-info">Learn how RAPID <strong>solves inconsistent</strong> store standards and site-wide campaigns</p>
+                        <button class="card-info info-btn-retail">LEARN MORE</button>
+                    </div>
                 </div>
                 <div class="card-column features ll-card">
                     <h3>Key Features</h3>
@@ -109,19 +119,19 @@
             <div class="blog">
                 <div class="blog-carousel even-columns">
                     <div class="blog-card">
-                        <img src="assets/istockphoto-1097297162-2048x2048.jpg" alt="iPad">
+                        <img src="assets/istockphoto-1097297162-2048x2048.jpg" alt="iPad displaying graphs">
                         <div class="blog-content">
-                            <h3>Empowering Remote Teams: 6 Effective Strategies</h3>
+                            <h3><a class="blog-title" href="#">EMPOWERING REMOTE TEAMS: 6 EFFECTIVE STRATEGIES</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices interdum.</p>
-                            <a class="read-article" href="#">Read Article</a>
+                            <a class="read-article" href="#">Read Article <i class="fa-solid fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <div class="blog-card">
-                        <img src="assets/istockphoto-1173213697-2048x2048.jpg" alt="iPad">
+                        <img src="assets/istockphoto-1173213697-2048x2048.jpg" alt="Chef using tablet">
                         <div class="blog-content">
-                            <h3>Work Management for the Virtual Workforce</h3>
+                            <h3><a class="blog-title" href="#">WORK MANAGEMENT FOR THE VIRTUAL WORKFORCE</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices interdum.</p>
-                            <a class="read-article" href="#">Read Article</a>
+                            <a class="read-article" href="#">Read Article <i class="fa-solid fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +173,7 @@
       <section>
         <div class="container">
             <div class="advantages even-columns">
-                <h2><span class="heading-clr">MOVE BEYOND</span> TRADITIONAL BRANCH COMMUNICATION…</h2>
+                <h2><span class="heading-clr">Move beyond</span> traditional branch communication…</h2>
                 <p class="adv-sub-heading">Solving inconsistent store standards and site-wide campaigns</p>
                 <div class="advantage-container">
                     <div class="advantage performance">
