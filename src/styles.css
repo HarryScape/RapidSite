@@ -1,6 +1,7 @@
 body {
   background-image: url(assets/stripes.svg);
-  /* background-repeat: repeat; */
+  /* background-size: 100% 100%; */
+  background-size: cover;
 }
 
 :root {
@@ -134,7 +135,7 @@ svg {
 
   .primary-header .container-header {
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
   }
 }
 
@@ -239,6 +240,13 @@ h1 {
 
 .mobile-nav-btn {
   display: none;
+}
+
+@media (min-width: 50em) {
+  .head-logo {
+    min-width: 240px;
+    height: auto;
+  }
 }
 
 @media (max-width: 50em) {
@@ -369,9 +377,18 @@ h1,
 }
 
 .top-carousel-nav {
-  cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
+  margin-top: 200px;
+  letter-spacing: 5px;
+}
+
+.top-carousel-nav i {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.top-carousel-nav i:hover {
+  transform: scale(1.1);
 }
 
 .btn-guide {
@@ -716,7 +733,15 @@ h1,
   .blog-card img {
     max-width: 337px;
     max-height: 220px;
-    height: auto;
+    height: 220px;
+  }
+
+  .even-columns-blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
   }
 
   .blog {
@@ -727,6 +752,10 @@ h1,
     background-color: #ffffff;
     display: flex;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    max-height: 220px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    margin: 0px 5px 0px 5px;
   }
   .blog-content {
     display: flex;
@@ -737,6 +766,7 @@ h1,
     margin-left: 20px;
     margin-right: 50px;
     margin-bottom: 20px;
+    overflow: hidden;
   }
   .blog-card h3 {
     font-size: 25px;
@@ -751,6 +781,29 @@ h1,
     font-weight: 700;
     text-decoration: none;
   }
+
+  .blog-nav {
+    color: #3379a5;
+    font-size: 3em;
+    cursor: pointer;
+    margin: 0px 40px 0px 40px;
+    /* position: relative; */
+  }
+  .next:hover,
+  .prev:hover {
+    transform: scale(1.1);
+  }
+  .prev {
+    transition: all 0.2s ease-in-out;
+    color: transparent;
+    /* margin-right: 20px; */
+  }
+  .next {
+    transition: all 0.2s ease-in-out;
+    /* position: relative;
+    top: 150px;
+    right: -1620px; */
+  }
 }
 
 @media (max-width: 50em) {
@@ -759,6 +812,26 @@ h1,
   }
   .blog-content h3 {
     font-size: 16px;
+  }
+
+  .blog-nav {
+    display: none;
+  }
+
+  .even-columns-blog {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .container-blog {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    --max-width: 1638px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
   }
 
   .blog-card {
@@ -1015,7 +1088,7 @@ h1,
 
   .icon {
     color: #3379a5;
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   .advantage h3 {
@@ -1058,8 +1131,10 @@ h1,
 
   .advantages-nav {
     color: #3379a5;
-    font-size: 1.5em;
+    font-size: 0.9em;
     margin-bottom: 30px;
+    margin-top: 20px;
+    letter-spacing: 10px;
   }
 }
 
