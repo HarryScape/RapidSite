@@ -448,6 +448,7 @@ h1,
 
   .retail {
     background-color: #866590;
+    margin-bottom: 35px;
   }
 
   .cards h2 {
@@ -637,9 +638,81 @@ h1,
 
 /* SECTION 3 BLOG CAROUSEL */
 
-.blog-card img {
-  max-width: 250px;
-  height: auto;
+.blog-content h3 {
+  color: #3379a5;
+  font-weight: 700;
+}
+
+@media (min-width: 50em) {
+  .blog-card img {
+    max-width: 337px;
+    height: auto;
+  }
+
+  .blog {
+    margin-bottom: 60px;
+  }
+
+  .blog-card {
+    background-color: #ffffff;
+    display: flex;
+  }
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+  .blog-card h3 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .blog-card p {
+    font-size: 20px;
+  }
+  .read-article {
+    font-size: 20px;
+    color: #3379a5;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 50em) {
+  .blog {
+    margin-bottom: 75px;
+  }
+  .blog-content h3 {
+    font-size: 16px;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .blog-card img {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .blog-content {
+    background-color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 13px;
+  }
+
+  .blog-content p {
+    font-size: 12px;
+  }
+
+  .read-article {
+    display: none;
+  }
 }
 
 /* SECTION 4 TESTIMONIALS */
