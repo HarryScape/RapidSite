@@ -240,6 +240,14 @@ h1 {
 
 .mobile-nav-btn {
   display: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0.5em;
+}
+
+.mobile-nav-btn .fa-xmark {
+  display: none;
 }
 
 @media (min-width: 50em) {
@@ -247,11 +255,38 @@ h1 {
     min-width: 240px;
     height: auto;
   }
+
+  .nav-list {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .nav-drop {
+    /* all: unset; */
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .header-submenu {
+    display: none;
+  }
 }
 
 @media (max-width: 50em) {
   .mobile-nav-btn {
     display: block;
+    position: fixed;
+    right: 15px;
+    top: 5pxpx;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -262,24 +297,91 @@ h1 {
 
   .primary-navigation {
     display: none;
+
+    position: fixed;
+    inset: 7rem 1rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+  }
+
+  .primary-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .primary-header[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* background-image: -webkit-linear-gradient(rgb 0 0 0 / 0), rgb(0 0 0 / 0.8); */
+    background: -webkit-linear-gradient(#0000004d, #00000093);
+  }
+
+  .nav-list {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #2c3034;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    text-decoration: none;
+    color: #707070;
+  }
+
+  .fa-caret-down {
+    /* display: none; */
+  }
+
+  .primary-navigation[data-visable] {
+    display: block;
+    /* position: fixed; */
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-button {
     display: none;
   }
-}
 
-.nav-list {
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  gap: 55px;
-}
+  .nav-drop {
+    font-weight: 700;
+  }
 
-.nav-list a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
+  .nav-drop a::hover,
+  .nav-drop a::focus {
+    color: #707070;
+  }
+
+  .header-submenu {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .header-submenu li {
+    padding: 10px;
+  }
+
+  .header-submenu a {
+    color: #3379a5;
+    font-weight: 400;
+  }
 }
 
 /* SECTION 1 CAROUSEL */

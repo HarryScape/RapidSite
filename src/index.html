@@ -6,6 +6,8 @@
     <title>Rapid Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <script type="module" src="main.js"></script> -->
+    <script src="main.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -22,16 +24,48 @@
       <div class="container-header">
         <div class="nav-wrapper">
             <a href="#"><img class="head-logo" src="assets/rapid-logo.svg" alt="Rapid"></a>
-            <button class="mobile-nav-btn" aria-controls="primary-navigation">
+            <button class="mobile-nav-btn" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="visually-hidden">Menu</span>
                 <i class="fa-solid fa-bars menu-icon" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark" alt="" aria-hidden="true"></i>
             </button>
-            <nav class="primary-navigation">
-              <ul role="list" class="nav-list" id="primary-navigation">
+            <nav class="primary-navigation" id="primary-navigation">
+              <ul role="list" class="nav-list" >
                 <li><a href="#">WHY RAPID?</a></li>
-                <li><a href="#">SOLUTIONS&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">RESOURCES&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">COMPANY&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                <li>
+                    <a href="#" class="nav-drop">SOLUTIONS&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                    <nav class="header-submenu">
+                        <ul role="list">
+                            <li><a href="#">Retail</a></li>
+                            <li><a href="#">Catering</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="#" class="nav-drop">RESOURCES&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                    <nav class="header-submenu">
+                        <ul role="list">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Articles</a></li>
+                            <li><a href="#">eBooks</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Infographics</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li>
+                    <a href="#" class="nav-drop">COMPANY&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                    <nav class="header-submenu">
+                        <ul role="list">
+                            <li><a href="#">About Rapid</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+                </li>
                 <li><a href="#">BLOG</a></li>
                 <button class="nav-button">REQUEST DEMO</button>
               </ul>
